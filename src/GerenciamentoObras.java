@@ -47,9 +47,18 @@ public class GerenciamentoObras {
             return listarObras;
     }
     
-   public static ObraArte buscaObra(String titulo){
+   public static ObraArte buscaObra(String titulo) throws Exception{
 
+        ArrayList<ObraArte> lista = listarObras();
 
+        for(ObraArte temp : lista){
+            if (temp.getTitulo() == titulo){
+                return temp;
+            }
+                
+            
+        }
+        throw new Exception("\nObra de arte com o titulo " + titulo + " nao foi encontrado!!");
 
         
     }
