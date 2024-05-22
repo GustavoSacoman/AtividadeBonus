@@ -46,13 +46,14 @@ public class GerenciamentoObras {
 
             return listarObras;
     }
+    /*
     
    public static ObraArte buscaObra(String titulo) throws Exception{
 
         ArrayList<ObraArte> lista = listarObras();
 
         for(ObraArte temp : lista){
-            if (temp.getTitulo() == titulo){
+            if (temp == titulo){
                 return temp;
             }
                 
@@ -89,5 +90,5 @@ public class GerenciamentoObras {
                 bw.write(temp + "\n");
                 }
             }
-    }
+    }*/
 }
