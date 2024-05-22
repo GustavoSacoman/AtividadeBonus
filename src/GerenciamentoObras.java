@@ -62,4 +62,32 @@ public class GerenciamentoObras {
 
         
     }
+
+    public static void excluirObra(String titulo) throws Exception{
+
+        ArrayList<ObraArte> listaTemp = listarObras();
+
+        boolean encontrado = false;
+        for(ObraArte temp : listaTemp){
+
+            if(temp.getTitulo() == titulo){
+                ObraArte a = temp;
+                listaTemp.remove(a);
+                encontrado = true;
+                break;
+            }
+            
+        }
+        if(!encontrado){
+            throw new Exception("A obra de arte com o titilo " + titulo + " nao foi localizada!");
+        }
+
+        try(FileWriter fw = new FileWriter(ARQUIVO);
+            BufferedWriter bw = new BufferedWriter(fw)){
+
+                for(ObraArte temp : listaTemp){
+                bw.write(temp + "\n");
+                }
+            }
+    }
 }
