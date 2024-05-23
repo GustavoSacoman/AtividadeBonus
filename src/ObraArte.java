@@ -19,6 +19,48 @@ public class ObraArte {
     }
 
 
+    
+    public String getTitulo() {
+        return titulo;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    public String getArtista() {
+        return artista;
+    }
+
+    public void setArtista(String artista) {
+        this.artista = artista;
+    }
+
+    public TipoObra getTipoObra() {
+        return tipoObra;
+    }
+
+
+    public void setTipoObra(TipoObra tipoObra) {
+        this.tipoObra = tipoObra;
+    }
+
+    public String getLocalizacao() {
+        return localizacao;
+    }
+
+    public void setLocalizacao(String localizacao) {
+        this.localizacao = localizacao;
+    }
+
+    public int getAnoCriacao() {
+        return anoCriacao;
+    }
+
+    public void setAnoCriacao(int anoCriacao) {
+        this.anoCriacao = anoCriacao;
+    }
+
+
+
     @Override
     public String toString() {
         return titulo + ", " + artista + ", " + tipoObra + ", " + localizacao + ", " + anoCriacao;

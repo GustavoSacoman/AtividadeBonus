@@ -46,14 +46,14 @@ public class GerenciamentoObras {
 
             return listarObras;
     }
-    /*
+    
     
    public static ObraArte buscaObra(String titulo) throws Exception{
 
         ArrayList<ObraArte> lista = listarObras();
 
         for(ObraArte temp : lista){
-            if (temp == titulo){
+            if (temp.getTitulo().equals(titulo)){
                 return temp;
             }
                 
@@ -67,11 +67,10 @@ public class GerenciamentoObras {
     public static void excluirObra(String titulo) throws Exception{
 
         ArrayList<ObraArte> listaTemp = listarObras();
-
         boolean encontrado = false;
         for(ObraArte temp : listaTemp){
-
-            if(temp.getTitulo() == titulo){
+            if(temp.getTitulo().equals(titulo)){
+           
                 ObraArte a = temp;
                 listaTemp.remove(a);
                 encontrado = true;
@@ -90,5 +89,5 @@ public class GerenciamentoObras {
                 bw.write(temp + "\n");
                 }
             }
-    }*/
+    }
 }
